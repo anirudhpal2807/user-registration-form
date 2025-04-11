@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UserRegistrationForm
 
 This project was made by [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# user-registration-form
+>>>>>>> 613e36d3afdcbbe346301a49fc3d1e844273c5bf
