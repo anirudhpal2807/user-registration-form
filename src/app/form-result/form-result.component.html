@@ -1,0 +1,81 @@
+<div class="form-result">
+  <div class="result-header">
+    <h2>Form Submission Result</h2>
+    <p>Thank you for completing the registration form!</p>
+  </div>
+  
+  <div class="result-content">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Personal Information Section -->
+        <tr class="section-header">
+          <td colspan="2">Personal Information</td>
+        </tr>
+        <tr *ngIf="formData.fullName">
+          <td>Full Name</td>
+          <td>{{ formData.fullName }}</td>
+        </tr>
+        <tr *ngIf="formData.email">
+          <td>Email</td>
+          <td>{{ formData.email }}</td>
+        </tr>
+        <tr *ngIf="formData.gender">
+          <td>Gender</td>
+          <td>{{ formData.gender }}</td>
+        </tr>
+        <tr *ngIf="formData.age">
+          <td>Age</td>
+          <td>{{ formData.age }}</td>
+        </tr>
+        <tr *ngIf="formData.birthDate">
+          <td>Birth Date</td>
+          <td>{{ formData.birthDate }}</td>
+        </tr>
+        <tr *ngIf="formData.occupation">
+          <td>Occupation</td>
+          <td>{{ formData.occupation }}</td>
+        </tr>
+        
+        <!-- Additional Information Section -->
+        <tr class="section-header">
+          <td colspan="2">Additional Information</td>
+        </tr>
+        <tr *ngIf="formData.favoriteQuestion">
+          <td>Security Question</td>
+          <td>{{ formData.favoriteQuestion }}</td>
+        </tr>
+        <tr *ngIf="formData.favoriteAnswer">
+          <td>Security Answer</td>
+          <td>{{ formData.favoriteAnswer }}</td>
+        </tr>
+        <tr *ngIf="formData.profilePic">
+          <td>Signature Picture</td>
+          <td>{{ formData.profilePic }}</td>
+        </tr>
+        <tr *ngIf="formData.comments">
+          <td>Comments</td>
+          <td>{{ formData.comments }}</td>
+        </tr>
+        <tr *ngIf="formData.satisfaction">
+          <td>Satisfaction Rating</td>
+          <td>
+            <div class="star-display">
+              <span *ngFor="let star of [1,2,3,4,5]" class="star" [class.filled]="star <= formData.satisfaction!">★</span>
+              <span class="star-value">{{ formData.satisfaction }} / 5</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="result-footer">
+    <button id="backButton" class="btn btn-primary" (click)="onBack()">Back to Form</button>
+  </div>
+</div>
